@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Computing Project</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/addScript.js"></script>
+</head>
+<body>
+    <h1>Stocks</h1>
+    <form id="stocks">
+        <div class="form-group">
+            <label for="symbol">Symbol:</label>
+            <input type="text" class="form-control" id="symbol" name="symbol" />
+        </div>
+
+        <div class="from_date">
+            <label for="from_date">From Date (YYYY-MM-DD):</label>
+            <input type="text" class="form-control" id="from_date" name="from_date" />
+        </div>
+
+        <div class="to_date">
+            <label for="to_date">To Date (YYYY-MM-DD):</label>
+            <input type="text" class="form-control" id="to_date" name="to_date" />
+        </div>
+
+        <div class="source">
+            <label>Source:</label><br>
+            <input type="radio" name="source" value="yahoo" checked> Yahoo!<br>
+            <input type="radio" name="source" value="google"> Google
+        </div>
+    </form>
+
+    <br>
+
+    <button type="button" onclick="getStocks()" class="btn btn-primary">Submit</button>
+
+    <table class="table table-stripped">
+        <tbody id="results">
+        </tbody>
+    </table>
+
+</body>
+</html>
